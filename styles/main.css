@@ -1,0 +1,7 @@
+img {
+    height: 30px;
+}
+
+.titleError, .authorError, emailError, .phoneError, .isbnError {
+    display: none;
+}

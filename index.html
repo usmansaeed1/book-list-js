@@ -18,25 +18,57 @@
         <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List
       </h1>
       <form id="book-form">
-        <div class="form-group">
+        <div class="form-group mb-2">
           <label for="title">Title</label>
           <input type="text" id="title" class="form-control">
+          <span class="text small text-danger titleError">Title is required</span>
         </div>
-        <div class="form-group">
+        <div class="form-group mb-2">
           <label for="author">Author</label>
           <input type="text" id="author" class="form-control">
+          <span class="text small text-danger authorError">Author is required</span>
         </div>
-        <div class="form-group">
+
+        <div class="form-group mb-2">
+          <label for="authorEmail">Author Email</label>
+          <input type="text" id="authorEmail" class="form-control">
+          <span class="text small text-danger emailError">Email is required</span>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="author-phone">Auther Phone</label>
+          <input type="text" id="author-phone" class="form-control">
+          <span class="text small text-danger phoneError">Phone is required</span>
+        </div>
+
+        <div class="form-group mb-2">
           <label for="isbn">ISBN#</label>
           <input type="text" id="isbn" class="form-control">
+          <span class="text small text-danger isbnError">Email is required</span>
         </div>
         <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+        <button type="button" id="addMockBooks" class="btn btn-success btn-block mt-3">Add 1000 Mock Books</button>
+        
       </form>
+      <hr>
+      <div class="row">
+        <form class="col-sm-3">
+          <div class="input-group mb-3">
+            <input id="search-input" type="text" class="form-control" placeholder="Search by Tile" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary searchBtn" type="button">GO</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
       <table class="table table-striped mt-5">
         <thead>
           <tr>
             <th>Title</th>
             <th>Author</th>
+            <th>Author Mail</th>
+            <th>Author Phone</th>
             <th>ISBN#</th>
             <th></th>
           </tr>
@@ -47,5 +79,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
